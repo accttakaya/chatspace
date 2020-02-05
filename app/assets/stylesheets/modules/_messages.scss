@@ -1,0 +1,191 @@
+// 変数定義、mixin
+// 特になし。
+
+// 順序について概ね下記の通り
+// １、height,width等divの大きさ
+// ２、divのbackground-color
+// ３、padding,margin等
+// ４、float,flexbox等配置に関するもの
+// ５、fontに関するもの
+
+* {
+  box-sizing: border-box;
+}
+
+.side-bar {
+  height: 100vh;
+  width: 300px;
+  background-color: #253141;
+  float: left;
+  .user-name {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .top-items {
+      width: 260px;
+      margin: 0 auto;
+      display: flex;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      &__name {
+        width: calc(100% - 60px);
+        line-height: 20px;
+      }
+      &__icons {
+        width: 60px;
+        line-height: 20px;
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        &__edit {
+          margin-right: 5px;
+          color: white;
+        }
+        &__setting {
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .group-list {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    .groupBox {
+      width: 260px;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      &__groupName {
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      &__newMessage {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.chat-main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+  float: right;
+  .group-info{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    .groupSummary {
+      padding-top: 35px;
+      padding-left: 40px;
+      &__name {
+        padding-bottom: 15px;
+        color: #333333;
+        font-size: 20px;
+      }
+      &__member {
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    .editBox {
+      width: 72px;
+      margin: 30px 30px;
+
+      &__button {
+        border: 1px solid #38aef0;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        a {
+          text-decoration: none;
+          color: #38aef0;
+        }
+      }
+    }
+  }
+
+  .message-list{
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    .messageBox {
+      padding-left: 40px;
+      &__data {
+        padding-top: 35px;
+        padding-bottom: 12px;
+        display: flex;
+        &__whose {
+          padding-right: 10px;
+          color: #333333;
+          font-size: 16px;
+        }
+        &__when {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &__text {
+        padding-bottom: 46px;
+        color: #434A54;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .message-form{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 0 20px 0;
+    .messageSpace {
+      width: calc(100% - 80px);
+      margin-right: 40px;
+      margin-left: 40px;
+      display: flex;
+      justify-content: space-between;
+
+      &__inputBox {
+        width: calc(100% - 80px) ;
+        display: flex;
+        position: relative;
+      
+        &__text {
+          width: 100%;
+          background-color: #ffffff;
+          border: 0;
+          margin-right: 15px;
+          color: #999999;
+          font-size: 17px;
+          text-indent: 1em;
+
+        }
+
+        &__image {
+          margin-right: 15px;
+          position: absolute;
+          right: 10px;
+        
+          &__icon {
+            margin-right: 10px;
+            font-size: 25px;
+            line-height: 52px;
+          }
+
+          &__select {
+            display: none;;
+          }
+        }
+      }
+      &__sendButton {
+        width: 80px;
+        background-color:  #38aef0;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+  }
+
+}
