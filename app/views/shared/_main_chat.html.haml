@@ -1,0 +1,29 @@
+.chat-main
+  .group-info
+    .groupSummary
+      .groupSummary__name
+        test
+      .groupSummary__member
+        Member : masa
+    .editBox
+      .editBox__button
+        = link_to "#" do
+          Edit
+  .message-list
+    .messageBox
+      .messageBox__data
+        .messageBox__data__whose
+          masa
+        .messageBox__data__when
+          2019/12/20(wed) 17:43:01
+      .messageBox__text
+        おはよう！
+  .message-form
+    %form{action:"#", method: "#", class: "messageSpace"}
+      .messageSpace__inputBox
+        %input{name: "#", value: "type a message", class: "messageSpace__inputBox__text"}
+        %label{class: "messageSpace__inputBox__image"}
+          = icon('fas', 'image', class: "messageSpace__inputBox__image__icon")
+          %input{type: "file", class:"messageSpace__inputBox__image__select"}
+      %input{type:"submit", value:"send", class: "messageSpace__sendButton"}
+      
