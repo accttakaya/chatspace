@@ -4,13 +4,15 @@
       .top-items__name
         = current_user.name
       .top-items__icons
-        = link_to "#", class: "top-items__icons__edit" do
+        = link_to new_group_path(current_user), class: "top-items__icons__edit" do
           %i.fa.fa-edit
         = link_to edit_user_path(current_user),  class: "top-items__icons__setting" do
           %i.fa.fa-cog
   .group-list
-    .groupBox
-      .groupBox__groupName
-        techcamp
-      .groupBox__newMessage
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .groupBox
+        = link_to '#' do
+          .groupBox__groupName
+            = group.name
+          .groupBox__newMessage
+            まだメッセージはありません
