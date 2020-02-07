@@ -2,11 +2,11 @@
   .user-name
     .top-items
       .top-items__name
-        masa
+        = current_user.name
       .top-items__icons
         = link_to "#", class: "top-items__icons__edit" do
           %i.fa.fa-edit
-        = link_to "#", class: "top-items__icons__setting" do
+        = link_to edit_user_path(current_user),  class: "top-items__icons__setting" do
           %i.fa.fa-cog
   .group-list
     .groupBox
