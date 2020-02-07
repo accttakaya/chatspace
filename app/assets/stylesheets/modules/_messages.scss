@@ -139,51 +139,47 @@
     background-color: #d2d2d2;
     padding: 20px 0 20px 0;
     .messageSpace {
-      width: calc(100% - 80px);
       margin-right: 40px;
       margin-left: 40px;
-      display: flex;
-      justify-content: space-between;
+      position: relative;
 
-      &__inputBox {
-        width: calc(100% - 80px) ;
-        display: flex;
+      .inputBox {
         position: relative;
-      
+        height: 50px;
+        
         &__text {
-          width: 100%;
-          background-color: #ffffff;
+          width: calc(100% - 95px);
           border: 0;
-          margin-right: 15px;
+          line-height: 50px;
           color: #999999;
           font-size: 17px;
           text-indent: 1em;
-
         }
 
         &__image {
-          margin-right: 15px;
           position: absolute;
-          right: 10px;
-        
+          right: 105px; 
+          top: 0;
           &__icon {
-            margin-right: 10px;
             font-size: 25px;
             line-height: 52px;
           }
-
           &__select {
             display: none;;
           }
         }
       }
-      &__sendButton {
+
+      .sendButton {
         width: 80px;
         background-color:  #38aef0;
         color: #ffffff;
         font-weight: bold;
         text-align: center;
         line-height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
