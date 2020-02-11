@@ -2,16 +2,16 @@ $(function(){
   function buildHTML(message){
     if(message.image){
       var html =
-       `<div class="messageBox"  data-message-id=${message.id}>
-          <div class="messageBox__data">
-            <div class="messageBox__data__whose">
+       `<div class="message-box"  data-message-id=${message.id}>
+          <div class="message-box__data">
+            <div class="message-box__data__whose">
               ${message.user_name}
             </div>
-            <div class="messageBox__data__when">
+            <div class="message-box__data__when">
               ${message.created_at}
             </div>
           </div>
-          <div class="messageBox__text">
+          <div class="message-box__text">
             ${message.content}
           </div>
           <img src=${message.image} >
@@ -19,16 +19,16 @@ $(function(){
       return html;
     } else {
       var html =
-       `<div class="messageBox"  data-message-id=${message.id}>
-          <div class="messageBox__data">
-            <div class="messageBox__data__whose">
+       `<div class="message-box"  data-message-id=${message.id}>
+          <div class="message-box__data">
+            <div class="message-box__data__whose">
               ${message.user_name}
             </div>
-            <div class="messageBox__data__when">
+            <div class="message-box__data__when">
               ${message.created_at}
             </div>
           </div>
-          <div class="messageBox__text">
+          <div class="message-box__text">
             ${message.content}
           </div>
         </div>`
@@ -54,10 +54,12 @@ $(function(){
        $('.message-list').append(html);
        $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
        $('form')[0].reset();
-       $('.sendButton').prop('disabled', false);
      })
      .fail(function(){
        alert("メッセージ送信に失敗しました");
+     })
+     .always(function(){
+      $('.send-button').prop('disabled', false);
      });
   })
 });

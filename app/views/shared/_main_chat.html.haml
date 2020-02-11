@@ -1,24 +1,24 @@
 .chat-main
   .group-info
-    .groupSummary
-      .groupSummary__name
+    .group-summary
+      .group-summary__name
         = @group.name
-      .groupSummary__member
+      .group-summary__member
         Member:
         - @users.each do |user|
           = "#{user.name}さん"
-    .editBox
-      .editBox__button
+    .edit-box
+      .edit-box__button
         = link_to edit_group_path(@group.id) do
           Edit
   .message-list
     = render @messages
   .message-form
-    .messageSpace
+    .message-space
       = form_for [@group, @message] do |f|
-        .inputBox  
-          = f.text_field :content, class: "inputBox__text", placeholder: 'type a message' 
-          = f.label :image, class: 'inputBox__image' do
-            = icon('fas', 'image', class: "inputBox__image__icon")
-            = f.file_field :image, class:"inputBox__image__select"
-        = f.submit 'Send', class: "sendButton"
+        .input-box  
+          = f.text_field :content, class: "input-box__text", placeholder: 'type a message' 
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: "input-box__image__icon")
+            = f.file_field :image, class:"input-box__image__select"
+        = f.submit 'Send', class: "send-button"

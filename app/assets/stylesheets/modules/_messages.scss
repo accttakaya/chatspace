@@ -53,12 +53,12 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     overflow: scroll;
-    .groupBox {
+    .group-box {
       width: 260px;
       margin: 0 auto;
       padding-top: 20px;
       padding-bottom: 40px;
-      .groupBox__link {
+      .group-box__link {
         text-decoration: none;
         color: white;
         &__groupName {
@@ -83,7 +83,7 @@
     display: flex;
     justify-content: space-between;
  
-    .groupSummary {
+    .group-summary {
       padding-top: 35px;
       padding-left: 40px;
       &__name {
@@ -96,7 +96,7 @@
         font-size: 12px;
       }
     }
-    .editBox {
+    .edit-box {
       width: 72px;
       margin: 30px 30px;
 
@@ -117,7 +117,7 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     overflow: scroll;
-    .messageBox {
+    .message-box {
       padding-left: 40px;
       &__data {
         padding-top: 35px;
@@ -145,12 +145,12 @@
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 0 20px 0;
-    .messageSpace {
+    .message-space {
       margin-right: 40px;
       margin-left: 40px;
       position: relative;
 
-      .inputBox {
+      .input-box {
         position: relative;
         height: 50px;
         
@@ -177,7 +177,7 @@
         }
       }
 
-      .sendButton {
+      .send-button {
         width: 80px;
         background-color:  #38aef0;
         color: #ffffff;
