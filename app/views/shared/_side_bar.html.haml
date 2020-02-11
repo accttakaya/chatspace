@@ -10,9 +10,9 @@
           %i.fa.fa-cog
   .group-list
     - current_user.groups.each do |group|
-      .groupBox
-        = link_to group_messages_path(group) do
-          .groupBox__groupName
+      .group-box
+        = link_to group_messages_path(group), class: "group-box__link" do
+          .group-box__link__groupName
             = group.name
-          .groupBox__newMessage
+          .group-box__link__newMessage
             = group.show_last_message
