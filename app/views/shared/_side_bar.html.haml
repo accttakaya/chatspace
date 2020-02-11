@@ -11,8 +11,8 @@
   .group-list
     - current_user.groups.each do |group|
       .groupBox
-        = link_to group_messages_path(group) do
-          .groupBox__groupName
+        = link_to group_messages_path(group), class: "groupBox__link" do
+          .groupBox__link__groupName
             = group.name
-          .groupBox__newMessage
+          .groupBox__link__newMessage
             = group.show_last_message

@@ -52,17 +52,22 @@
   .group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    overflow: scroll;
     .groupBox {
       width: 260px;
       margin: 0 auto;
       padding-top: 20px;
       padding-bottom: 40px;
-      &__groupName {
-        margin-bottom: 5px;
-        font-size: 15px;
-      }
-      &__newMessage {
-        font-size: 11px;
+      .groupBox__link {
+        text-decoration: none;
+        color: white;
+        &__groupName {
+          margin-bottom: 5px;
+          font-size: 15px;
+        }
+        &__newMessage {
+          font-size: 11px;
+        }
       }
     }
   }
@@ -77,6 +82,7 @@
     height: 100px;
     display: flex;
     justify-content: space-between;
+ 
     .groupSummary {
       padding-top: 35px;
       padding-left: 40px;
@@ -110,6 +116,7 @@
   .message-list{
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    overflow: scroll;
     .messageBox {
       padding-left: 40px;
       &__data {

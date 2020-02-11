@@ -6,20 +6,13 @@
       .groupSummary__member
         Member:
         - @users.each do |user|
-          = "#{user.name}さん "
+          = "#{user.name}さん"
     .editBox
       .editBox__button
         = link_to edit_group_path(@group.id) do
           Edit
   .message-list
-    .messageBox
-      .messageBox__data
-        .messageBox__data__whose
-          masa
-        .messageBox__data__when
-          2019/12/20(wed) 17:43:01
-      .messageBox__text
-        = render @messages
+    = render @messages
   .message-form
     .messageSpace
       = form_for [@group, @message] do |f|
