@@ -1,4 +1,4 @@
-class MessagesController < ApplicationController
+dclass MessagesController < ApplicationController
   before_action :set_group
 
   def index
